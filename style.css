@@ -83,7 +83,7 @@ h3 {
     height: 120px;
 /* Adjust as needed */
 margin-top:-50px;
-    margin-left: -25px;
+    margin-left: 35px;
      border-radius: 8%;
 
 }
@@ -99,7 +99,7 @@ margin-top:-50px;
 .main-nav {
     order: 2;
     /* Keep navigation on the left */
-    margin-top: 150px;
+    margin-top: 200px;
     margin-right:-100px;
 }
 
