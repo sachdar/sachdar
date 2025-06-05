@@ -21,7 +21,6 @@ h3 {
     font-size: 25px;
 }
 
-
 .section-padding {
     padding: 60px 20px;
     max-width: 1200px;
@@ -32,26 +31,23 @@ h3 {
 .header {
     background: linear-gradient(135deg, #2c3e50, #34495e);
     color: #ecf0f1;
-    height: 184px;
+    height: 184px; /* Consider if this fixed height is suitable for all content */
     padding: 20px 0;
-    position: relative;
-    top: -10;
+    position: relative; /* Changed from top: -10 to relative as it's typically positioned within flow */
     z-index: 1000;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-
 }
 
 .welcome-balochi {
     background-color: #e7e7e7;
     color: #3a3a39;
     text-align: center;
-    margin-top: -83px;
+    margin-top: -83px; /* This negative margin might cause overlap issues */
     padding: 10px 0;
     border-radius: 2px;
     font-size: 1.2em;
     border-top: 3px solid rgb(52, 90, 124);
 }
-
 
 .header-content {
     display: flex;
@@ -60,7 +56,6 @@ h3 {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
-
 }
 
 .publication-info {
@@ -69,30 +64,31 @@ h3 {
     font-size: 8px;
     font-weight: 100;
     font-family: 'Noto Nastaliq Urdu', sans-serif;
-    order: 2;
-    /* Move to the right */
+    order: 2; /* Move to the right for larger screens */
 }
 
 .publication-logo {
     height: 180px;
-    /* Adjust as needed */
-    margin-left: -30px;
+    margin-left: -30px; /* This negative margin might cause content to go off-screen */
     border-radius: 50%;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
 .publication-title {
     margin-left: 15px;
-    margin-top: -20px;
+    margin-top: -20px; /* Adjust as needed */
     font-size: 2.5em;
     color: #e9e9e9;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 .main-nav {
-    order: 2;
-    /* Keep navigation on the left */
-    margin-top: -150px;
+    order: 2; /* Keep navigation on the left for larger screens */
+    margin-top: -150px; /* This negative margin might cause overlap issues */
+    /* For larger screens, display items in a row by default */
+    display: flex;
+    justify-content: flex-end; /* Align links to the right for desktop */
+    align-items: center;
 }
 
 .nav-link {
@@ -110,7 +106,6 @@ h3 {
     transform: translateY(-2px);
 }
 
-
 /* Book Grid Layout */
 .book-grid {
     display: grid;
@@ -123,7 +118,6 @@ h3 {
 .book-card {
     background-color: #fff;
     border-radius: 10px;
-    /* Rounded all corners slightly */
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     text-align: center;
@@ -132,7 +126,6 @@ h3 {
     display: flex;
     flex-direction: column;
 }
-
 
 .book-card:hover {
     transform: translateY(-8px);
@@ -143,19 +136,13 @@ h3 {
     width: 100%;
     height: 450px;
     object-fit: cover;
-
-    border-top-left-radius: 0px;
-    /* Remove radius on image top */
-    border-top-right-radius: 0px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
     border-bottom-left-radius: 0;
-    /* Avoid unnecessary radius */
     border-bottom-right-radius: 0;
-
     margin: 0;
-    /* Prevent spacing that might cause height issues */
     display: block;
 }
-
 
 .book-card img:hover {
     transform: scale(1.02);
@@ -279,7 +266,6 @@ h3 {
     color: #555;
     margin-bottom: 20px;
     flex-grow: 1;
-    /* Allows text to take available space */
 }
 
 .author-card button {
@@ -292,7 +278,6 @@ h3 {
     font-size: 1em;
     transition: background-color 0.3s ease, transform 0.2s ease;
     margin-top: auto;
-    /* Pushes button to bottom */
 }
 
 .author-card button:hover {
@@ -416,7 +401,6 @@ h3 {
     transform: translateY(-2px);
 }
 
-
 /* Footer */
 .footer {
     background: linear-gradient(45deg, #2c3e50, #34495e);
@@ -445,107 +429,13 @@ h3 {
     border-radius: 50%;
     transition: transform 0.3s ease, filter 0.3s ease;
     filter: none;
-    /* Reset filters */
 }
-
 
 .social-links img:hover {
     transform: scale(1.15) rotate(5deg);
     filter: drop-shadow(2px 2px 6px rgba(255, 255, 255, 0.6));
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .header-content {
-        flex-direction: column;
-    }
-
-    .publication-info {
-        order: 1;
-        margin-bottom: 15px;
-    }
-
-    .main-nav {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-        margin-top: 15px;
-      }
-    
-      .nav-link {
-        display: block;
-        width: 100%;
-        max-width: 320px;
-        text-align: center;
-        padding: 10px;
-        margin: 5px 0;
-        background-color: rgba(255, 255, 255, 0.1); /* optional highlight */
-        border-radius: 6px;
-        font-size: 1.1em;
-      }
-
-    .publication-title {
-        font-size: 1.8em;
-    }
-
-    .welcome-balochi h2 {
-        font-size: 1em;
-    }
-
-    .book-grid {
-        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-        gap: 20px;
-    }
-
-    .book-card img {
-        height: 280px;
-    }
-
-    .author-grid {
-        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-        gap: 20px;
-    }
-
-    .modal-content {
-        padding: 20px;
-    }
-}
-
-@media (max-width: 480px) {
-    .publication-logo {
-        height: 45px;
-    }
-
-    .publication-title {
-        font-size: 1.5em;
-    }
-
-    .nav-link {
-        font-size: 0.9em;
-        margin: 0 8px;
-        padding: 6px 10px;
-    }
-
-    .book-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-
-/* Ensure the main nav links are updated to point to .html files */
-.main-nav .nav-link {
-    /* Existing styles, just ensure hrefs point to .html files */
-    color: #ecf0f1;
-    text-decoration: none;
-    margin: 0 15px;
-    font-size: 1.1em;
-    padding: 8px 15px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-/* ... (rest of your existing style.css) */
 /* Pagination Styles */
 .pagination {
     display: flex;
@@ -582,15 +472,6 @@ h3 {
     font-weight: bold;
 }
 
-@media (max-width: 480px) {
-    .pagination-button {
-        padding: 8px 14px;
-        font-size: 0.9em;
-    }
-}
-
-
-
 /* Add this new style for the footer navigation */
 .footer-nav {
     margin-top: 20px;
@@ -599,9 +480,7 @@ h3 {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    /* Allows navigation items to wrap on smaller screens */
     gap: 15px;
-    /* Space between links */
 }
 
 .footer-nav .nav-link {
@@ -618,18 +497,15 @@ h3 {
     transform: translateY(-2px);
 }
 
-
 .contact-full {
     padding-top: 60px;
     padding-bottom: 60px;
     min-height: calc(100vh - 250px);
-    /* Enough to fill screen minus header/footer */
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
 }
-
 
 /* Description text under heading */
 .contact-description {
@@ -673,49 +549,120 @@ h3 {
     font-weight: bold;
 }
 
-/* Desktop default - horizontal nav */
-.main-nav {
-    display: flex;
-    justify-content: center; /* center nav items */
-    gap: 30px;
-    padding: 10px 0;
-  }
-  
-  /* Nav link styles */
-  .main-nav .nav-link {
-    color: #ecf0f1;
-    text-decoration: none;
-    margin: 0 15px;
-    font-size: 1.1em;
-    padding: 8px 15px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-  }
-  
-  /* Hover effect */
-  .main-nav .nav-link:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-    transform: translateY(-2px);
-  }
-  
-  /* Responsive - stack nav links vertically on smaller screens */
-  @media (max-width: 768px) {
-    .main-nav {
-      flex-direction: column;
-      align-items: center;
-      gap: 15px;
-      padding: 15px 0;
+/* Responsive Design - Media Query for screens up to 768px */
+@media (max-width: 768px) {
+    .header {
+        height: auto; /* Allow header height to adjust based on content */
+        padding-bottom: 15px; /* Add some padding at the bottom for mobile */
     }
-    
-    .main-nav .nav-link {
-      margin: 0;
-      width: 90%;
-      max-width: 300px;
-      text-align: center;
-      padding: 12px 0;
-      background-color: rgba(255, 255, 255, 0.1);
-      border-radius: 7px;
-    }
-  }
-  
 
+    .header-content {
+        flex-direction: column; /* Stack logo/title and nav vertically */
+        text-align: center; /* Center content horizontally */
+    }
+
+    .publication-info {
+        order: 1; /* Keep logo/title at the top */
+        margin-bottom: 15px; /* Space between logo/title and nav */
+        font-size: 12px; /* Adjust font size for mobile publication info */
+        margin-left: 0; /* Remove negative margin for mobile */
+    }
+
+    .publication-logo {
+        height: 100px; /* Smaller logo for mobile */
+        margin-left: 0; /* Remove negative margin for mobile */
+    }
+
+    .publication-title {
+        font-size: 1.8em; /* Smaller title for mobile */
+        margin-top: 10px; /* Adjust margin for mobile title */
+        margin-left: 0; /* Remove left margin for mobile */
+    }
+
+    .welcome-balochi {
+        margin-top: 15px; /* Adjust margin to prevent overlap with header */
+        font-size: 1em; /* Adjust font size for mobile */
+    }
+
+    .welcome-balochi h2 {
+        font-size: 1em; /* Adjust font size for mobile */
+    }
+
+    .main-nav {
+        order: 2; /* Navigation below the logo/title */
+        margin-top: 15px; /* Adjust margin to ensure it doesn't overlap */
+        display: flex; /* Make it a flex container */
+        flex-direction: row; /* Arrange items in a row */
+        justify-content: center; /* Center the navigation items horizontally */
+        align-items: center; /* Center them vertically if needed */
+        flex-wrap: wrap; /* Allow items to wrap to the next line if space is tight */
+        gap: 10px; /* Space between navigation items */
+        width: 100%; /* Ensure it takes full width for centering */
+    }
+
+    .nav-link {
+        display: inline-block; /* Treat them as inline blocks to sit next to each other */
+        width: auto; /* Allow width to be determined by content */
+        max-width: none; /* Remove any max-width restrictions */
+        text-align: center;
+        padding: 8px 12px; /* Adjust padding for better touch targets */
+        margin: 5px; /* Add a small margin around each link for spacing */
+        font-size: 0.95em; /* Slightly smaller font size for mobile */
+    }
+
+    .book-grid {
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); /* Smaller minmax for mobile books */
+        gap: 15px; /* Smaller gap for mobile */
+    }
+
+    .book-card img {
+        height: 250px; /* Adjust image height for mobile */
+    }
+
+    .author-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Smaller minmax for mobile authors */
+        gap: 15px; /* Smaller gap for mobile */
+    }
+
+    .modal-content {
+        padding: 20px;
+    }
+
+    .close-preview,
+    .close-modal {
+        font-size: 30px; /* Smaller close icons for mobile */
+        top: 10px;
+        right: 15px;
+    }
+
+    .contact-form {
+        margin: 20px auto 0; /* Adjust margin for mobile contact form */
+        padding: 0 10px; /* Add some horizontal padding */
+    }
+
+    .contact-socials {
+        gap: 20px; /* Smaller gap for mobile social icons */
+    }
+
+    .contact-socials img {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+/* Tablet responsiveness (adjust as needed, example at 992px) */
+@media (max-width: 992px) {
+    .publication-title {
+        font-size: 2em; /* Slightly smaller on tablets */
+    }
+
+    .nav-link {
+        margin: 0 10px; /* Reduce spacing on tablets */
+        font-size: 1em;
+    }
+
+    .book-grid {
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+        gap: 25px;
+    }
+}
