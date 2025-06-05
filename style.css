@@ -619,18 +619,18 @@ h3 {
 /* Responsive Design */
 @media (max-width: 768px) {
     .header-content {
-        flex-direction: column;
+        flex-direction: row;
     }
 
     .publication-info {
-        order: 1;
+        order: 2;
         margin-bottom: 15px;
     }
 
     .main-nav {
-        order: 2;
+        order: 1;
         width: 100%;
-        text-align: center;
+        text-align:right;
     }
 
     .nav-link {
@@ -639,11 +639,11 @@ h3 {
     }
 
     .publication-title {
-        font-size: 1.8em;
+        font-size: 0.5em;
     }
 
     .welcome-balochi h2 {
-        font-size: 1em;
+        font-size: 0.5em;
     }
 
     .book-grid {
