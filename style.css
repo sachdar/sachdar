@@ -1,4 +1,3 @@
-/* (Keep all existing CSS from previous responses) */
 /* General Body and Typography */
 body {
     font-family: 'Noto Nastaliq Urdu', sans-serif;
@@ -31,9 +30,11 @@ h3 {
 .header {
     background: linear-gradient(135deg, #2c3e50, #34495e);
     color: #ecf0f1;
-    height: 184px; /* Consider if this fixed height is suitable for all content */
+    height: 184px;
     padding: 20px 0;
-    position: relative; /* Changed from top: -10 to relative as it's typically positioned within flow */
+    position: relative;
+    /* `top: -10;` is unusual here, often indicates position issues. Kept for now, but be aware. */
+    top: -10px;
     z-index: 1000;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
@@ -42,7 +43,8 @@ h3 {
     background-color: #e7e7e7;
     color: #3a3a39;
     text-align: center;
-    margin-top: -83px; /* This negative margin might cause overlap issues */
+    /* This negative margin can cause overlap. Consider alternative layouts if issues arise. */
+    margin-top: -83px;
     padding: 10px 0;
     border-radius: 2px;
     font-size: 1.2em;
@@ -64,30 +66,32 @@ h3 {
     font-size: 8px;
     font-weight: 100;
     font-family: 'Noto Nastaliq Urdu', sans-serif;
-    order: 2; /* Move to the right for larger screens */
+    order: 2; /* Move to the right on desktop */
 }
 
 .publication-logo {
     height: 180px;
-    margin-left: -30px; /* This negative margin might cause content to go off-screen */
+    /* This negative margin can cause content to go off-screen. */
+    margin-left: -50px;
     border-radius: 50%;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
 .publication-title {
     margin-left: 15px;
-    margin-top: -20px; /* Adjust as needed */
+    margin-top: -20px;
     font-size: 2.5em;
     color: #e9e9e9;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 .main-nav {
-    order: 2; /* Keep navigation on the left for larger screens */
-    margin-top: -150px; /* This negative margin might cause overlap issues */
-    /* For larger screens, display items in a row by default */
+    order: 2; /* Keeps navigation on the left for larger screens by default */
+    /* This negative margin can cause overlap. Consider alternative layouts if issues arise. */
+    margin-top: -150px;
+    /* Ensure it's a flex container on desktop too, aligning items to the end */
     display: flex;
-    justify-content: flex-end; /* Align links to the right for desktop */
+    justify-content: flex-end;
     align-items: center;
 }
 
@@ -136,8 +140,8 @@ h3 {
     width: 100%;
     height: 450px;
     object-fit: cover;
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
     margin: 0;
@@ -265,7 +269,7 @@ h3 {
     font-size: 0.95em;
     color: #555;
     margin-bottom: 20px;
-    flex-grow: 1;
+    flex-grow: 1; /* Allows text to take available space */
 }
 
 .author-card button {
@@ -277,7 +281,7 @@ h3 {
     cursor: pointer;
     font-size: 1em;
     transition: background-color 0.3s ease, transform 0.2s ease;
-    margin-top: auto;
+    margin-top: auto; /* Pushes button to bottom */
 }
 
 .author-card button:hover {
@@ -428,7 +432,7 @@ h3 {
     background-color: transparent;
     border-radius: 50%;
     transition: transform 0.3s ease, filter 0.3s ease;
-    filter: none;
+    filter: none; /* Reset filters */
 }
 
 .social-links img:hover {
@@ -472,15 +476,15 @@ h3 {
     font-weight: bold;
 }
 
-/* Add this new style for the footer navigation */
+/* Footer Navigation Styles */
 .footer-nav {
     margin-top: 20px;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     padding-top: 15px;
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
-    gap: 15px;
+    flex-wrap: wrap; /* Allows navigation items to wrap on smaller screens */
+    gap: 15px; /* Space between links */
 }
 
 .footer-nav .nav-link {
@@ -497,10 +501,11 @@ h3 {
     transform: translateY(-2px);
 }
 
+/* Contact Full Page Layout */
 .contact-full {
     padding-top: 60px;
     padding-bottom: 60px;
-    min-height: calc(100vh - 250px);
+    min-height: calc(100vh - 250px); /* Enough to fill screen minus header/footer */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -549,22 +554,32 @@ h3 {
     font-weight: bold;
 }
 
-/* Responsive Design - Media Query for screens up to 768px */
+---
+
+## Responsive Design Adjustments
+
+These media queries ensure your layout adapts well to different screen sizes.
+
+### For Medium Screens (up to 768px wide)
+
+This section targets tablets and larger mobile devices.
+
+```css
 @media (max-width: 768px) {
     .header {
-        height: auto; /* Allow header height to adjust based on content */
-        padding-bottom: 15px; /* Add some padding at the bottom for mobile */
+        height: auto; /* Allow header to adjust height based on content */
+        padding-bottom: 15px; /* Add some padding at the bottom */
     }
 
     .header-content {
-        flex-direction: column; /* Stack logo/title and nav vertically */
-        text-align: center; /* Center content horizontally */
+        flex-direction: column; /* Stack logo/title and navigation vertically */
+        text-align: center; /* Center the content horizontally */
     }
 
     .publication-info {
         order: 1; /* Keep logo/title at the top */
         margin-bottom: 15px; /* Space between logo/title and nav */
-        font-size: 12px; /* Adjust font size for mobile publication info */
+        font-size: 12px; /* Adjust font size for mobile */
         margin-left: 0; /* Remove negative margin for mobile */
     }
 
@@ -580,7 +595,7 @@ h3 {
     }
 
     .welcome-balochi {
-        margin-top: 15px; /* Adjust margin to prevent overlap with header */
+        margin-top: 15px; /* Adjust margin to prevent overlap */
         font-size: 1em; /* Adjust font size for mobile */
     }
 
@@ -588,27 +603,30 @@ h3 {
         font-size: 1em; /* Adjust font size for mobile */
     }
 
+    /* --- FIX FOR NAVIGATION BAR ON MOBILE --- */
     .main-nav {
         order: 2; /* Navigation below the logo/title */
         margin-top: 15px; /* Adjust margin to ensure it doesn't overlap */
-        display: flex; /* Make it a flex container */
-        flex-direction: row; /* Arrange items in a row */
+        display: flex; /* **IMPORTANT: Make it a flex container** */
+        flex-direction: row; /* **IMPORTANT: Arrange items in a row** */
         justify-content: center; /* Center the navigation items horizontally */
         align-items: center; /* Center them vertically if needed */
-        flex-wrap: wrap; /* Allow items to wrap to the next line if space is tight */
+        flex-wrap: wrap; /* **IMPORTANT: Allow items to wrap to the next line if space is tight** */
         gap: 10px; /* Space between navigation items */
         width: 100%; /* Ensure it takes full width for centering */
     }
 
     .nav-link {
+        /* **IMPORTANT: Adjustments for individual nav links on mobile** */
         display: inline-block; /* Treat them as inline blocks to sit next to each other */
         width: auto; /* Allow width to be determined by content */
-        max-width: none; /* Remove any max-width restrictions */
+        max-width: none; /* Remove any max-width restrictions from original */
         text-align: center;
         padding: 8px 12px; /* Adjust padding for better touch targets */
         margin: 5px; /* Add a small margin around each link for spacing */
         font-size: 0.95em; /* Slightly smaller font size for mobile */
     }
+    /* --- END FIX --- */
 
     .book-grid {
         grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); /* Smaller minmax for mobile books */
@@ -648,21 +666,47 @@ h3 {
         width: 50px;
         height: 50px;
     }
+
+    .pagination-button {
+        padding: 8px 14px;
+        font-size: 0.9em;
+    }
 }
 
-/* Tablet responsiveness (adjust as needed, example at 992px) */
-@media (max-width: 992px) {
+### For Smaller Mobile Screens (up to 480px wide)
+
+This section provides further adjustments for very small phone screens.
+
+```css
+@media (max-width: 480px) {
+    .publication-logo {
+        height: 80px; /* Even smaller logo for very small screens */
+    }
+
     .publication-title {
-        font-size: 2em; /* Slightly smaller on tablets */
+        font-size: 1.5em; /* Even smaller title */
     }
 
     .nav-link {
-        margin: 0 10px; /* Reduce spacing on tablets */
-        font-size: 1em;
+        font-size: 0.9em; /* Slightly smaller font for nav links */
+        margin: 5px; /* Consistent margin */
+        padding: 6px 10px;
     }
 
     .book-grid {
-        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-        gap: 25px;
+        grid-template-columns: 1fr; /* Stack books in a single column */
+    }
+
+    .book-card img {
+        height: 220px; /* Adjust image height */
+    }
+
+    .author-grid {
+        grid-template-columns: 1fr; /* Stack authors in a single column */
+    }
+
+    .contact-socials {
+        flex-direction: column; /* Stack social icons vertically */
+        gap: 15px; /* Adjust gap */
     }
 }
