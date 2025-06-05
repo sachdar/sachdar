@@ -399,7 +399,7 @@ paginateBooks(authorBooks, 6, 1, authorModalBookDisplay, (book) => {
 
     if (currentPage === 'index.html' || currentPage === '') {
         const homePagination = document.getElementById('home-pagination');
-        paginateBooks(books, 4, 1, homeLatestBooks, createHomeBookCard, homePagination);
+        paginateBooks(books, 6, 1, homeLatestBooks, createHomeBookCard, homePagination);
         
 
         // Event listeners specific to index.html
