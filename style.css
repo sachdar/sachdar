@@ -617,7 +617,7 @@ h3 {
 
 
 /* Responsive Design */
-@media (max-width: 768px) {
+@media (max-width: 360px) {
     .header-content {
         flex-direction: row;
     }
@@ -630,7 +630,8 @@ h3 {
     .main-nav {
         order: 1;
         width: 100%;
-        text-align:right;
+        text-align:left;
+        flex-direction:row;
     }
 
     .nav-link {
