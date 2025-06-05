@@ -18,6 +18,7 @@ h3 {
     color: #2c3e50;
     text-align: center;
     margin-bottom: 25px;
+    margin-left:850px;
     font-size: 20px;
 }
 
@@ -82,7 +83,7 @@ h3 {
 }
 
 .publication-title {
-    margin-left: 15px;
+    margin-left:10px;
     margin-top: -20px;
     font-size: 2.5em;
     color: #e9e9e9;
@@ -93,13 +94,12 @@ h3 {
     order: 2;
     /* Keep navigation on the left */
     margin-right:-150px;
-    margin-top: -40px;
+    margin-top: -50px;
 }
 
 .nav-link {
     color: #ecf0f1;
     text-decoration: none;
-    margin-top:20
     margin: 0 15px;
     font-size: 1.1em;
     padding: 8px 15px;
@@ -456,26 +456,55 @@ h3 {
     filter: drop-shadow(2px 2px 6px rgba(255, 255, 255, 0.6));
 }
 
-@media (max-width: 480px) {
-    .publication-logo {
-        height: 45px;
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
     }
 
-    .publication-title {
-        font-size: 1.5em;
+    .publication-info {
+        order: 1;
+        margin-bottom: 15px;
+    }
+
+    .main-nav {
+        order: 2;
+        width: 100%;
+        text-align: center;
     }
 
     .nav-link {
-        font-size: 0.9em;
-        margin-top:20px;
-        margin: 0 8px;
-        padding: 6px 10px;
+        display: block;
+        margin: 10px 0;
+    }
+
+    .publication-title {
+        font-size: 1.8em;
+    }
+
+    .welcome-balochi h2 {
+        font-size: 1em;
     }
 
     .book-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 20px;
+    }
+
+    .book-card img {
+        height: 280px;
+    }
+
+    .author-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 20px;
+    }
+
+    .modal-content {
+        padding: 20px;
     }
 }
+
 
 
 /* Ensure the main nav links are updated to point to .html files */
@@ -528,10 +557,52 @@ h3 {
 }
 
 @media (max-width: 480px) {
-    .pagination-button {
-        padding: 8px 14px;
-        font-size: 0.9em;
+    .header-content {
+        flex-direction: column;
     }
+
+    .publication-info {
+        order: 1;
+        margin-bottom: 15px;
+    }
+
+    .main-nav {
+        order: 2;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-link {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .publication-title {
+        font-size: 1.8em;
+    }
+
+    .welcome-balochi h2 {
+        font-size: 1em;
+    }
+
+    .book-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 20px;
+    }
+
+    .book-card img {
+        height: 280px;
+    }
+
+    .author-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 20px;
+    }
+
+    .modal-content {
+        padding: 20px;
+    }
+}
 }
 
 
@@ -618,37 +689,34 @@ h3 {
     font-weight: bold;
 }
 
-
-/* Responsive Design */
-@media (max-width: 360px) {
+/* Responsive layout on smaller devices */
+@media (max-width: 600px) {
     .header-content {
-        flex-direction: row;
+        flex-direction: column;
     }
 
     .publication-info {
-        order: 2;
+        order: 1;
         margin-bottom: 15px;
     }
 
     .main-nav {
-        order: 1;
+        order: 2;
         width: 100%;
-        text-align:left;
-        flex-direction:row;
+        text-align: center;
     }
 
     .nav-link {
         display: block;
         margin: 10px 0;
-        margin-top:20px;
     }
 
     .publication-title {
-        font-size: 0.5em;
+        font-size: 1.8em;
     }
 
     .welcome-balochi h2 {
-        font-size: 0.5em;
+        font-size: 1em;
     }
 
     .book-grid {
@@ -668,4 +736,5 @@ h3 {
     .modal-content {
         padding: 20px;
     }
+}
 }
