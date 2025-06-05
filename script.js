@@ -363,7 +363,7 @@ function renderPagination(totalPages, currentPage, container, onPageClick) {
         authorNameInModal.textContent = authorName;
         const authorBooks = books.filter(book => book.authorId === authorId);
         const authorPagination = document.getElementById('author-pagination');
-paginateBooks(authorBooks, 4, 1, authorModalBookDisplay, (book) => {
+paginateBooks(authorBooks, 6, 1, authorModalBookDisplay, (book) => {
     const bookCard = document.createElement('div');
     bookCard.classList.add('book-card');
     bookCard.innerHTML = `
