@@ -410,7 +410,7 @@ paginateBooks(authorBooks, 4, 1, authorModalBookDisplay, (book) => {
 
     } else if (currentPage === 'books.html') {
         const booksPagination = document.getElementById('books-pagination');
-paginateBooks(books, 4, 1, allBooksDisplay, createFullBookCard, booksPagination);
+paginateBooks(books, 6, 1, allBooksDisplay, createFullBookCard, booksPagination);
 
         // Event listeners specific to books.html
         if (closeBooksPreview) closeBooksPreview.addEventListener('click', () => hideBookPreview(booksBookPreviewOverlay));
