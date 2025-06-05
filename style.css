@@ -18,7 +18,7 @@ h3 {
     color: #2c3e50;
     text-align: center;
     margin-bottom: 25px;
-    font-size: 25px;
+    font-size: 20px;
 }
 
 
@@ -82,8 +82,8 @@ h3 {
     width: 120px;
     height: 120px;
 /* Adjust as needed */
-margin-top:25px;
-    margin-left: -40px;
+margin-top:-50px;
+    margin-left: -25px;
      border-radius: 8%;
 
 }
@@ -100,6 +100,7 @@ margin-top:25px;
     order: 2;
     /* Keep navigation on the left */
     margin-top: 150px;
+    margin-right:-100px;
 }
 
 .nav-link {
