@@ -18,9 +18,11 @@ h3 {
     color: #2c3e50;
     text-align: center;
     margin-bottom: 25px;
-    font-size: 20px;
 }
 
+#test{
+    font-size:13px;
+ }
 
 .section-padding {
     padding: 60px 20px;
@@ -52,7 +54,6 @@ h3 {
     border-top: 3px solid rgb(52, 90, 124);
 }
 
-
 .header-content {
     display: flex;
     justify-content: space-between;
@@ -82,8 +83,8 @@ h3 {
     width: 120px;
     height: 120px;
 /* Adjust as needed */
-margin-top:-50px;
-    margin-left: 25px;
+margin-top:-70px;
+    margin-left: 20px;
      border-radius: 8%;
 
 }
@@ -100,7 +101,7 @@ margin-top:-50px;
     order: 2;
     /* Keep navigation on the left */
     margin-top: 150px;
-    margin-right:-100px;
+    margin-right:20px;
 }
 
 .nav-link {
