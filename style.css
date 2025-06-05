@@ -454,55 +454,6 @@ h3 {
     filter: drop-shadow(2px 2px 6px rgba(255, 255, 255, 0.6));
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .header-content {
-        flex-direction: column;
-    }
-
-    .publication-info {
-        order: 1;
-        margin-bottom: 15px;
-    }
-
-    .main-nav {
-        order: 2;
-        width: 100%;
-        text-align: center;
-    }
-
-    .nav-link {
-        display: block;
-        margin: 10px 0;
-    }
-
-    .publication-title {
-        font-size: 1.8em;
-    }
-
-    .welcome-balochi h2 {
-        font-size: 1em;
-    }
-
-    .book-grid {
-        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-        gap: 20px;
-    }
-
-    .book-card img {
-        height: 280px;
-    }
-
-    .author-grid {
-        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-        gap: 20px;
-    }
-
-    .modal-content {
-        padding: 20px;
-    }
-}
-
 @media (max-width: 480px) {
     .publication-logo {
         height: 45px;
@@ -664,10 +615,52 @@ h3 {
     font-weight: bold;
 }
 
-/* Responsive layout on smaller devices */
-@media (max-width: 600px) {
-    .contact-socials {
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header-content {
         flex-direction: column;
-        gap: 25px;
+    }
+
+    .publication-info {
+        order: 1;
+        margin-bottom: 15px;
+    }
+
+    .main-nav {
+        order: 2;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-link {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .publication-title {
+        font-size: 1.8em;
+    }
+
+    .welcome-balochi h2 {
+        font-size: 1em;
+    }
+
+    .book-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 20px;
+    }
+
+    .book-card img {
+        height: 280px;
+    }
+
+    .author-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 20px;
+    }
+
+    .modal-content {
+        padding: 20px;
     }
 }
