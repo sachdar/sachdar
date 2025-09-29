@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
        
          {
             id: 'a24', title: 'منء رھزادگءِ کِسّہ (دومی چاپ)', authorId: 'b18', authorName: 'تاج بلوچ',
-            price: '600', edition: 'شائری', pages: 128, publicationDate: 'اکتوبر 2025',
+            price: '600', edition: 'شائری', pages: 128, publicationDate: 'اکتوبر-2025',
             image: 'Images/book_Covers/taj_baloch_1.jpeg' 
             },
         // ... (your 22 book objects, sorted by publicationDate)
