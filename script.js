@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
          // ... Taj Baloch man e razadag ey kessa
        
          {
-            id: 'a24', title: 'منء رھزادگءِ کِسّہ (دومی چاپ)', authorId: 'b24', authorName: 'تاج بلوچ',
+            id: 'a24', title: 'منء رھزادگءِ کِسّہ (دومی چاپ)', authorId: 'b18', authorName: 'تاج بلوچ',
             price: '600', edition: 'شائری', pages: 128, publicationDate: 'اکتوبر 2025',
             image: 'Images/book_Covers/taj_baloch_1.jpeg' 
         },
@@ -189,7 +189,7 @@ document.addEventListener('DOMContentLoaded', () => {
             image: 'images/author1.jpg'
         },
          {
-            authorId: 'b24', name: 'تاج بلوچ',
+            authorId: 'b18', name: 'تاج بلوچ',
             bio: '',
             image: 'images/author1.jpg'
         },
