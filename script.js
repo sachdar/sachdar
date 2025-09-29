@@ -1,6 +1,15 @@
 document.addEventListener('DOMContentLoaded', () => {
     // --- Data Storage (Keep this exactly as provided previously) ---
     const books = [
+    // ... taj Baloch 1 
+       
+        {
+            id: 'a24', title: 'نہ مُلک مُلکے نہ درمُلک (دومی چاپ)', authorId: 'b17', authorName: 'ساجد حسین',
+            price: '800', edition: 'گچین', pages: 200, publicationDate: '2025-مئی',
+            image: 'Images/book_Covers/taj_baloch_1.jpeg' 
+        },
+
+        
         // ... (your 22 book objects, sorted by publicationDate)
        
         {
@@ -176,6 +185,11 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         {
             authorId: 'b17', name: 'ساجد حسین',
+            bio: '',
+            image: 'images/author1.jpg'
+        },
+         {
+            authorId: 'b24', name: 'تاج بلوچ',
             bio: '',
             image: 'images/author1.jpg'
         },
