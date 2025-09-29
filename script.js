@@ -9,6 +9,11 @@ document.addEventListener('DOMContentLoaded', () => {
             price: '600', edition: 'شائری', pages: 128, publicationDate: 'اکتوبر 2025',
             image: 'Images/book_Covers/taj_baloch_1.jpeg' 
         },
+        {
+            id: 'a24', title: 'نہ مُلک مُلکے نہ درمُلک (دومی چاپ)', authorId: 'b17', authorName: 'ساجد حسین',
+            price: '800', edition: 'گچین', pages: 200, publicationDate: '2025-مئی',
+            image: 'Images/book_Covers/Sajid-Hussain-2-b17.jpg' 
+        },
         
         // ... (your 22 book objects, sorted by publicationDate)
        
