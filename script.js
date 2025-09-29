@@ -1,20 +1,13 @@
 document.addEventListener('DOMContentLoaded', () => {
     // --- Data Storage (Keep this exactly as provided previously) ---
     const books = [
-    // ... taj Baloch 1 
          // ... Taj Baloch man e razadag ey kessa
        
          {
             id: 'a24', title: 'منء رھزادگءِ کِسّہ (دومی چاپ)', authorId: 'b18', authorName: 'تاج بلوچ',
             price: '600', edition: 'شائری', pages: 128, publicationDate: 'اکتوبر 2025',
             image: 'Images/book_Covers/taj_baloch_1.jpeg' 
-        },
-        {
-            id: 'a24', title: 'نہ مُلک مُلکے نہ درمُلک (دومی چاپ)', authorId: 'b17', authorName: 'ساجد حسین',
-            price: '800', edition: 'گچین', pages: 200, publicationDate: '2025-مئی',
-            image: 'Images/book_Covers/Sajid-Hussain-2-b17.jpg' 
-        },
-        
+            },
         // ... (your 22 book objects, sorted by publicationDate)
        
         {
@@ -194,7 +187,7 @@ document.addEventListener('DOMContentLoaded', () => {
             image: 'images/author1.jpg'
         },
          {
-            authorId: 'a24', authorName: 'تاج بلوچ',
+            authorId: 'b18', authorName: 'تاج بلوچ',
             bio: '',
             image: 'images/author1.jpg'
         },
