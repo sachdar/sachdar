@@ -187,7 +187,7 @@ document.addEventListener('DOMContentLoaded', () => {
             image: 'images/author1.jpg'
         },
          {
-            authorId: 'b18', authorName: 'تاج بلوچ',
+            authorId: 'b18', name: 'تاج بلوچ',
             bio: '',
             image: 'images/author1.jpg'
         }
