@@ -190,7 +190,7 @@ document.addEventListener('DOMContentLoaded', () => {
             authorId: 'b18', authorName: 'تاج بلوچ',
             bio: '',
             image: 'images/author1.jpg'
-        },
+        }
         
     ];
 
