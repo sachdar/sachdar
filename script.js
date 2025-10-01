@@ -219,7 +219,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Dynamically get elements based on current page
    // helper function for closing previews
  
-    if (currentPage === 'index.html' || currentPage === '') { // '' for root path
+    if (currentPage === 'index.html') { 
         homeLatestBooks = document.getElementById('home-latest-books');
         homeBookPreviewOverlay = document.getElementById('home-book-preview-overlay');
         homePreviewImage = document.getElementById('home-preview-image');
