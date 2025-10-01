@@ -219,83 +219,73 @@ document.addEventListener('DOMContentLoaded', () => {
     // Dynamically get elements based on current page
    // helper function for closing previews
 
-    
-if (currentPage === 'index.html' || currentPage === '') {
-    const homeLatestBooks = document.getElementById('home-latest-books');
-    const homeBookPreviewOverlay = document.getElementById('home-book-preview-overlay');
-    const homePreviewImage = document.getElementById('home-preview-image');
-    const closeHomePreview = document.getElementById('close-home-preview');
+// Detect current page
+const currentPage = window.location.pathname.split("/").pop();
 
-    if (homeLatestBooks && homeBookPreviewOverlay && homePreviewImage) {
-        // Open preview when clicking a book image
-        homeLatestBooks.addEventListener("click", function (e) {
-            if (e.target.tagName === "IMG") {
-                homePreviewImage.src = e.target.src;
-                homeBookPreviewOverlay.style.display = "flex";
-                document.body.style.overflow = "hidden";
-            }
-        });
-    }
+// INDEX PAGE
+if (currentPage === "index.html" || currentPage === "") {
+  const homeLatestBooks = document.getElementById("home-latest-books");
+  const homeBookPreviewOverlay = document.getElementById("home-book-preview-overlay");
+  const homePreviewImage = document.getElementById("home-preview-image");
+  const closeHomePreview = document.getElementById("close-home-preview");
 
-    if (closeHomePreview && homeBookPreviewOverlay) {
-        // Close overlay
-        closeHomePreview.addEventListener("click", function () {
-            console.log("Close clicked on index");
-            homeBookPreviewOverlay.style.display = "none";
-            homePreviewImage.src = "";
-            document.body.style.overflow = "auto";
-        });
-    }
+  if (homeLatestBooks && homeBookPreviewOverlay && homePreviewImage && closeHomePreview) {
+    homeLatestBooks.addEventListener("click", function (e) {
+      if (e.target.tagName === "IMG") {
+        homePreviewImage.src = e.target.src;
+        homeBookPreviewOverlay.style.display = "flex";
+      }
+    });
+
+    closeHomePreview.addEventListener("click", function () {
+      homeBookPreviewOverlay.style.display = "none";
+      homePreviewImage.src = "";
+    });
+  }
 }
-else if (currentPage === 'books.html') {
-    const allBooksDisplay = document.getElementById('all-books-display');
-    const booksBookPreviewOverlay = document.getElementById('books-book-preview-overlay');
-    const booksPreviewImage = document.getElementById('books-preview-image');
-    const closeBooksPreview = document.getElementById('close-books-preview');
 
-    if (allBooksDisplay && booksBookPreviewOverlay && booksPreviewImage) {
-        allBooksDisplay.addEventListener("click", function (e) {
-            if (e.target.tagName === "IMG") {
-                booksPreviewImage.src = e.target.src;
-                booksBookPreviewOverlay.style.display = "flex";
-                document.body.style.overflow = "hidden";
-            }
-        });
-    }
+// BOOKS PAGE
+else if (currentPage === "books.html") {
+  const allBooksDisplay = document.getElementById("all-books-display");
+  const booksBookPreviewOverlay = document.getElementById("books-book-preview-overlay");
+  const booksPreviewImage = document.getElementById("books-preview-image");
+  const closeBooksPreview = document.getElementById("close-books-preview");
 
-    if (closeBooksPreview && booksBookPreviewOverlay) {
-        closeBooksPreview.addEventListener("click", function () {
-            console.log("Close clicked on books");
-            booksBookPreviewOverlay.style.display = "none";
-            booksPreviewImage.src = "";
-            document.body.style.overflow = "auto";
-        });
-    }
+  if (allBooksDisplay && booksBookPreviewOverlay && booksPreviewImage && closeBooksPreview) {
+    allBooksDisplay.addEventListener("click", function (e) {
+      if (e.target.tagName === "IMG") {
+        booksPreviewImage.src = e.target.src;
+        booksBookPreviewOverlay.style.display = "flex";
+      }
+    });
+
+    closeBooksPreview.addEventListener("click", function () {
+      booksBookPreviewOverlay.style.display = "none";
+      booksPreviewImage.src = "";
+    });
+  }
 }
-else if (currentPage === 'authors.html') {
-    const authorsDisplay = document.getElementById('authors-display');
-    const authorModalBookPreviewOverlay = document.getElementById('author-modal-book-preview-overlay');
-    const authorModalPreviewImage = document.getElementById('author-modal-preview-image');
-    const closeAuthorModalPreview = document.getElementById('close-author-modal-preview');
 
-    if (authorsDisplay && authorModalBookPreviewOverlay && authorModalPreviewImage) {
-        authorsDisplay.addEventListener("click", function (e) {
-            if (e.target.tagName === "IMG") {
-                authorModalPreviewImage.src = e.target.src;
-                authorModalBookPreviewOverlay.style.display = "flex";
-                document.body.style.overflow = "hidden";
-            }
-        });
-    }
+// AUTHORS PAGE
+else if (currentPage === "authors.html") {
+  const authorsDisplay = document.getElementById("authors-display");
+  const authorModalBookPreviewOverlay = document.getElementById("author-modal-book-preview-overlay");
+  const authorModalPreviewImage = document.getElementById("author-modal-preview-image");
+  const closeAuthorModalPreview = document.getElementById("close-author-modal-preview");
 
-    if (closeAuthorModalPreview && authorModalBookPreviewOverlay) {
-        closeAuthorModalPreview.addEventListener("click", function () {
-            console.log("Close clicked on authors");
-            authorModalBookPreviewOverlay.style.display = "none";
-            authorModalPreviewImage.src = "";
-            document.body.style.overflow = "auto";
-        });
-    }
+  if (authorsDisplay && authorModalBookPreviewOverlay && authorModalPreviewImage && closeAuthorModalPreview) {
+    authorsDisplay.addEventListener("click", function (e) {
+      if (e.target.tagName === "IMG") {
+        authorModalPreviewImage.src = e.target.src;
+        authorModalBookPreviewOverlay.style.display = "flex";
+      }
+    });
+
+    closeAuthorModalPreview.addEventListener("click", function () {
+      authorModalBookPreviewOverlay.style.display = "none";
+      authorModalPreviewImage.src = "";
+    });
+  }
 }
 
 
