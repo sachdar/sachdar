@@ -229,12 +229,11 @@ margin-top:-70px;
     .close-preview {
     position: absolute;
     top: 15px;
-    right: -50px;
+    right: 5px;
     color: #fff;
-    font-size: 32px;
+    font-size: 65px;
     cursor: pointer;
     transition: transform 0.2s ease;
-    z-index: 9999;
 }
 
 
