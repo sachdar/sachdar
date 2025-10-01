@@ -134,7 +134,7 @@ document.addEventListener('DOMContentLoaded', () => {
         {
             authorId: 'b01', name: 'سلمان ابراهیم',
             bio: '',
-            image: 'images/author1.jpg'
+            image: 'Images/Authors/mt_photo.jpg'
         },
         {
             authorId: 'b02', name: 'نعیم پیرجان',
@@ -144,52 +144,52 @@ document.addEventListener('DOMContentLoaded', () => {
         {
             authorId: 'b04', name: 'عباس حسن',
             bio: '',
-            image: 'images/author1.jpg'
+            image: 'Images/Authors/mt_photo.jpg'
         },
         {
             authorId: 'b06', name: 'منیر مومن',
             bio: '',
-            image: 'images/author1.jpg'
+            image: 'Images/Authors/mt_photo.jpg'
         },
         {
             authorId: 'b07', name: 'خالق ارمان',
             bio: '',
-            image: 'images/author1.jpg'
+            image: 'Images/Authors/mt_photo.jpg'
         },
         {
             authorId: 'b09', name: 'ڈاکٹر بیزن صبا',
             bio: '',
-            image: 'images/author1.jpg'
+            image: 'Images/Authors/mt_photo.jpg'
         },
         {
             authorId: 'b11', name: 'چراغ حاجت',
             bio: '',
-            image: 'images/author1.jpg'
+            image: 'Images/Authors/mt_photo.jpg'
         },
         {
             authorId: 'b12', name: 'اے آر داد',
             bio: '',
-            image: 'images/author1.jpg'
+            image: 'Images/Authors/mt_photo.jpg'
         },
         {
             authorId: 'b13', name: 'رحیم مهر',
             bio: '',
-            image: 'images/author1.jpg'
+            image: 'Images/Authors/mt_photo.jpg'
         },
         {
             authorId: 'b16', name: 'شهزاد عبید',
             bio: '',
-            image: 'images/author1.jpg'
+            image: 'Images/Authors/mt_photo.jpg'
         },
         {
             authorId: 'b17', name: 'ساجد حسین',
             bio: '',
-            image: 'images/author1.jpg'
+            image: 'Images/Authors/mt_photo.jpg'
         },
          {
             authorId: 'b18', name: 'تاج بلوچ',
             bio: '',
-            image: 'images/author1.jpg'
+            image: 'Images/Authors/mt_photo.jpg'
         }
         
     ];
