@@ -217,23 +217,46 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     // Dynamically get elements based on current page
-    if (currentPage === 'index.html' || currentPage === '') { // '' for root path
-        homeLatestBooks = document.getElementById('home-latest-books');
-        homeBookPreviewOverlay = document.getElementById('home-book-preview-overlay');
-        homePreviewImage = document.getElementById('home-preview-image');
-        closeHomePreview = document.getElementById('close-home-preview');
-    } else if (currentPage === 'books.html') {
-        allBooksDisplay = document.getElementById('all-books-display');
-        booksBookPreviewOverlay = document.getElementById('books-book-preview-overlay');
-        booksPreviewImage = document.getElementById('books-preview-image');
-        closeBooksPreview = document.getElementById('close-books-preview');
-    } else if (currentPage === 'authors.html') {
-        authorsDisplay = document.getElementById('authors-display');
-        // Author modal preview elements are also needed on authors.html
-        authorModalBookPreviewOverlay = document.getElementById('author-modal-book-preview-overlay');
-        authorModalPreviewImage = document.getElementById('author-modal-preview-image');
-        closeAuthorModalPreview = document.getElementById('close-author-modal-preview');
+   // helper function for closing previews
+function setupCloseButton(overlayId, buttonId) {
+    const overlay = document.getElementById(overlayId);
+    const button = document.getElementById(buttonId);
+
+    if (overlay && button) {
+        button.addEventListener("click", () => {
+            overlay.style.display = "none";
+        });
     }
+}
+
+if (currentPage === 'index.html' || currentPage === '') {
+    homeLatestBooks = document.getElementById('home-latest-books');
+    homeBookPreviewOverlay = document.getElementById('home-book-preview-overlay');
+    homePreviewImage = document.getElementById('home-preview-image');
+    closeHomePreview = document.getElementById('close-home-preview');
+
+    // attach close handler
+    setupCloseButton("home-book-preview-overlay", "close-home-preview");
+
+} else if (currentPage === 'books.html') {
+    allBooksDisplay = document.getElementById('all-books-display');
+    booksBookPreviewOverlay = document.getElementById('books-book-preview-overlay');
+    booksPreviewImage = document.getElementById('books-preview-image');
+    closeBooksPreview = document.getElementById('close-books-preview');
+
+    // attach close handler
+    setupCloseButton("books-book-preview-overlay", "close-books-preview");
+
+} else if (currentPage === 'authors.html') {
+    authorsDisplay = document.getElementById('authors-display');
+    authorModalBookPreviewOverlay = document.getElementById('author-modal-book-preview-overlay');
+    authorModalPreviewImage = document.getElementById('author-modal-preview-image');
+    closeAuthorModalPreview = document.getElementById('close-author-modal-preview');
+
+    // attach close handler
+    setupCloseButton("author-modal-book-preview-overlay", "close-author-modal-preview");
+}
+
 
     // --- Helper Functions (Modify how preview is opened based on which overlay to use) ---
 
