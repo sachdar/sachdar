@@ -220,9 +220,6 @@ document.addEventListener('DOMContentLoaded', () => {
    // helper function for closing previews
 if (currentPage === 'index.html' || currentPage === '') {
     homeLatestBooks = document.getElementById('home-latest-books');
-    homeBookPreviewOverlay = document.getElementById('home-book-preview-overlay');
-    homePreviewImage = document.getElementById('home-preview-image');
-    closeHomePreview = document.getElementById('close-home-preview');
 }
 else if (currentPage === 'books.html') {
     allBooksDisplay = document.getElementById('all-books-display');
