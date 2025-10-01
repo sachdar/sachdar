@@ -224,15 +224,8 @@ if (currentPage === 'index.html' || currentPage === '') {
     homeBookPreviewOverlay = document.getElementById('home-book-preview-overlay');
     homePreviewImage = document.getElementById('home-preview-image');
     closeHomePreview = document.getElementById('close-home-preview');
-
-    // ✅ Add close button logic
-    if (closeHomePreview) {
-        closeHomePreview.addEventListener('click', () => {
-            homeBookPreviewOverlay.style.display = 'none';
-            homePreviewImage.src = ''; // optional reset
-        });
-    }
 }
+
     } else if (currentPage === 'books.html') {
         allBooksDisplay = document.getElementById('all-books-display');
         booksBookPreviewOverlay = document.getElementById('books-book-preview-overlay');
