@@ -374,7 +374,7 @@ function renderPagination(totalPages, currentPage, container, onPageClick) {
         authorNameInModal.textContent = authorName;
         const authorBooks = books.filter(book => book.authorId === authorId);
         const authorPagination = document.getElementById('author-pagination');
-paginateBooks(authorBooks, 6, 1, authorModalBookDisplay, (book) => {
+paginateBooks(authorBooks, 8, 1, authorModalBookDisplay, (book) => {
     const bookCard = document.createElement('div');
     bookCard.classList.add('book-card');
     bookCard.innerHTML = `
@@ -410,7 +410,7 @@ paginateBooks(authorBooks, 6, 1, authorModalBookDisplay, (book) => {
 
     if (currentPage === 'index.html' || currentPage === '') {
         const homePagination = document.getElementById('home-pagination');
-        paginateBooks(books, 6, 1, homeLatestBooks, createHomeBookCard, homePagination);
+        paginateBooks(books, 8, 1, homeLatestBooks, createHomeBookCard, homePagination);
         
 
         // Event listeners specific to index.html
@@ -421,7 +421,7 @@ paginateBooks(authorBooks, 6, 1, authorModalBookDisplay, (book) => {
 
     } else if (currentPage === 'books.html') {
         const booksPagination = document.getElementById('books-pagination');
-paginateBooks(books, 6, 1, allBooksDisplay, createFullBookCard, booksPagination);
+paginateBooks(books, 8, 1, allBooksDisplay, createFullBookCard, booksPagination);
 
         // Event listeners specific to books.html
         if (closeBooksPreview) closeBooksPreview.addEventListener('click', () => hideBookPreview(booksBookPreviewOverlay));
