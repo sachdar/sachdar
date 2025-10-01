@@ -218,35 +218,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Dynamically get elements based on current page
    // helper function for closing previews
-    if (currentPage === 'index.html' || currentPage === '') {
-    const homeLatestBooks = document.getElementById('home-latest-books');
-    const homeBookPreviewOverlay = document.getElementById('home-book-preview-overlay');
-    const homePreviewImage = document.getElementById('home-preview-image');
-    const closeHomePreview = document.getElementById('close-home-preview');
 
-    if (homeLatestBooks && homeBookPreviewOverlay && homePreviewImage && closeHomePreview) {
-        // Open preview
-        homeLatestBooks.addEventListener("click", function (e) {
-            if (e.target.tagName === "IMG") {
-                homePreviewImage.src = e.target.src;
-                homeBookPreviewOverlay.style.display = "flex";
-            }
-        });
-
-        // Close preview
-        closeHomePreview.addEventListener("click", function () {
-            homeBookPreviewOverlay.style.display = "none";
-            homePreviewImage.src = "";
-        });
-    }
-}
-
-/*if (currentPage === 'index.html' || currentPage === '') {
+if (currentPage === 'index.html' || currentPage === '') {
     homeLatestBooks = document.getElementById('home-latest-books');
     homeBookPreviewOverlay = document.getElementById('home-book-preview-overlay');
     homePreviewImage = document.getElementById('home-preview-image');
     closeHomePreview = document.getElementById('close-home-preview');
-}*/
+}
 else if (currentPage === 'books.html') {
     allBooksDisplay = document.getElementById('all-books-display');
     booksBookPreviewOverlay = document.getElementById('books-book-preview-overlay');
