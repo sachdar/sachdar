@@ -218,25 +218,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Dynamically get elements based on current page
    // helper function for closing previews
-
-if (currentPage === 'index.html' || currentPage === '') {
-    homeLatestBooks = document.getElementById('home-latest-books');
-    homeBookPreviewOverlay = document.getElementById('home-book-preview-overlay');
-    homePreviewImage = document.getElementById('home-preview-image');
-    closeHomePreview = document.getElementById('close-home-preview');
-}
-else if (currentPage === 'books.html') {
-    allBooksDisplay = document.getElementById('all-books-display');
-    booksBookPreviewOverlay = document.getElementById('books-book-preview-overlay');
-    booksPreviewImage = document.getElementById('books-preview-image');
-    closeBooksPreview = document.getElementById('close-books-preview');
-}
-else if (currentPage === 'authors.html') {
-    authorsDisplay = document.getElementById('authors-display');
-    authorModalBookPreviewOverlay = document.getElementById('author-modal-book-preview-overlay');
-    authorModalPreviewImage = document.getElementById('author-modal-preview-image');
-    closeAuthorModalPreview = document.getElementById('close-author-modal-preview');
-}
+ 
+    if (currentPage === 'index.html' || currentPage === '') { // '' for root path
+        homeLatestBooks = document.getElementById('home-latest-books');
+        homeBookPreviewOverlay = document.getElementById('home-book-preview-overlay');
+        homePreviewImage = document.getElementById('home-preview-image');
+        closeHomePreview = document.getElementById('close-home-preview');
+    } else if (currentPage === 'books.html') {
+        allBooksDisplay = document.getElementById('all-books-display');
+        booksBookPreviewOverlay = document.getElementById('books-book-preview-overlay');
+        booksPreviewImage = document.getElementById('books-preview-image');
+        closeBooksPreview = document.getElementById('close-books-preview');
+    } else if (currentPage === 'authors.html') {
+        authorsDisplay = document.getElementById('authors-display');
+        // Author modal preview elements are also needed on authors.html
+        authorModalBookPreviewOverlay = document.getElementById('author-modal-book-preview-overlay');
+        authorModalPreviewImage = document.getElementById('author-modal-preview-image');
+        closeAuthorModalPreview = document.getElementById('close-author-modal-preview');
+    }
 
 
 
