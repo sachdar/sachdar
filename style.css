@@ -357,14 +357,14 @@ margin-top:-70px;
     position: absolute;
     top: 15px;
     right: 25px;
-    color: #333;
-    font-size: 35px;
+    color: #fff;
+    font-size: 45px;
     cursor: pointer;
     transition: transform 0.2s ease;
 }
 
 .close-modal:hover {
-    transform: rotate(90deg);
+    transform: scale(1.2);
 }
 
 /* Contact Section */
