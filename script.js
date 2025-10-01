@@ -218,44 +218,86 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Dynamically get elements based on current page
    // helper function for closing previews
-function setupCloseButton(overlayId, buttonId) {
-    const overlay = document.getElementById(overlayId);
-    const button = document.getElementById(buttonId);
 
-    if (overlay && button) {
-        button.addEventListener("click", () => {
-            overlay.style.display = "none";
+    
+if (currentPage === 'index.html' || currentPage === '') {
+    const homeLatestBooks = document.getElementById('home-latest-books');
+    const homeBookPreviewOverlay = document.getElementById('home-book-preview-overlay');
+    const homePreviewImage = document.getElementById('home-preview-image');
+    const closeHomePreview = document.getElementById('close-home-preview');
+
+    if (homeLatestBooks && homeBookPreviewOverlay && homePreviewImage) {
+        // Open preview when clicking a book image
+        homeLatestBooks.addEventListener("click", function (e) {
+            if (e.target.tagName === "IMG") {
+                homePreviewImage.src = e.target.src;
+                homeBookPreviewOverlay.style.display = "flex";
+                document.body.style.overflow = "hidden";
+            }
+        });
+    }
+
+    if (closeHomePreview && homeBookPreviewOverlay) {
+        // Close overlay
+        closeHomePreview.addEventListener("click", function () {
+            console.log("Close clicked on index");
+            homeBookPreviewOverlay.style.display = "none";
+            homePreviewImage.src = "";
+            document.body.style.overflow = "auto";
+        });
+    }
+}
+else if (currentPage === 'books.html') {
+    const allBooksDisplay = document.getElementById('all-books-display');
+    const booksBookPreviewOverlay = document.getElementById('books-book-preview-overlay');
+    const booksPreviewImage = document.getElementById('books-preview-image');
+    const closeBooksPreview = document.getElementById('close-books-preview');
+
+    if (allBooksDisplay && booksBookPreviewOverlay && booksPreviewImage) {
+        allBooksDisplay.addEventListener("click", function (e) {
+            if (e.target.tagName === "IMG") {
+                booksPreviewImage.src = e.target.src;
+                booksBookPreviewOverlay.style.display = "flex";
+                document.body.style.overflow = "hidden";
+            }
+        });
+    }
+
+    if (closeBooksPreview && booksBookPreviewOverlay) {
+        closeBooksPreview.addEventListener("click", function () {
+            console.log("Close clicked on books");
+            booksBookPreviewOverlay.style.display = "none";
+            booksPreviewImage.src = "";
+            document.body.style.overflow = "auto";
+        });
+    }
+}
+else if (currentPage === 'authors.html') {
+    const authorsDisplay = document.getElementById('authors-display');
+    const authorModalBookPreviewOverlay = document.getElementById('author-modal-book-preview-overlay');
+    const authorModalPreviewImage = document.getElementById('author-modal-preview-image');
+    const closeAuthorModalPreview = document.getElementById('close-author-modal-preview');
+
+    if (authorsDisplay && authorModalBookPreviewOverlay && authorModalPreviewImage) {
+        authorsDisplay.addEventListener("click", function (e) {
+            if (e.target.tagName === "IMG") {
+                authorModalPreviewImage.src = e.target.src;
+                authorModalBookPreviewOverlay.style.display = "flex";
+                document.body.style.overflow = "hidden";
+            }
+        });
+    }
+
+    if (closeAuthorModalPreview && authorModalBookPreviewOverlay) {
+        closeAuthorModalPreview.addEventListener("click", function () {
+            console.log("Close clicked on authors");
+            authorModalBookPreviewOverlay.style.display = "none";
+            authorModalPreviewImage.src = "";
+            document.body.style.overflow = "auto";
         });
     }
 }
 
-if (currentPage === 'index.html' || currentPage === '') {
-    homeLatestBooks = document.getElementById('home-latest-books');
-    homeBookPreviewOverlay = document.getElementById('home-book-preview-overlay');
-    homePreviewImage = document.getElementById('home-preview-image');
-    closeHomePreview = document.getElementById('close-home-preview');
-
-    // attach close handler
-    setupCloseButton("home-book-preview-overlay", "close-home-preview");
-
-} else if (currentPage === 'books.html') {
-    allBooksDisplay = document.getElementById('all-books-display');
-    booksBookPreviewOverlay = document.getElementById('books-book-preview-overlay');
-    booksPreviewImage = document.getElementById('books-preview-image');
-    closeBooksPreview = document.getElementById('close-books-preview');
-
-    // attach close handler
-    setupCloseButton("books-book-preview-overlay", "close-books-preview");
-
-} else if (currentPage === 'authors.html') {
-    authorsDisplay = document.getElementById('authors-display');
-    authorModalBookPreviewOverlay = document.getElementById('author-modal-book-preview-overlay');
-    authorModalPreviewImage = document.getElementById('author-modal-preview-image');
-    closeAuthorModalPreview = document.getElementById('close-author-modal-preview');
-
-    // attach close handler
-    setupCloseButton("author-modal-book-preview-overlay", "close-author-modal-preview");
-}
 
 
     // --- Helper Functions (Modify how preview is opened based on which overlay to use) ---
