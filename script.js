@@ -222,7 +222,6 @@ document.addEventListener('DOMContentLoaded', () => {
 if (currentPage === 'index.html' || currentPage === '') {
     homeLatestBooks = document.getElementById('home-latest-books');
     homeBookPreviewOverlay = document.getElementById('home-book-preview-overlay');
-}
 
     } else if (currentPage === 'books.html') {
         allBooksDisplay = document.getElementById('all-books-display');
