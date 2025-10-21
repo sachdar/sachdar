@@ -1,6 +1,13 @@
 document.addEventListener('DOMContentLoaded', () => {
     // --- Data Storage (Keep this exactly as provided previously) ---
     const books = [
+//...Mujeeb Azad e Oedipus
+         {
+            id: 'a25', title: 'اڈیپس', authorId: 'b19', authorName: 'مجیب آزاد',
+            price: '400', edition: 'رجانک/کسمانک', pages: 112, publicationDate: 'انومبر-2025',
+            image: 'Images/book_Covers/Mujeeb_Azad_oedipus.jpg' 
+            },
+        
          // ... Taj Baloch man e razadag ey kessa
        
          {
@@ -190,7 +197,13 @@ document.addEventListener('DOMContentLoaded', () => {
             authorId: 'b18', name: 'تاج بلوچ',
             bio: '',
             image: 'Images/Authors/mt_photo.jpg'
+        },
+        {
+            authorId: 'b19', name: 'مجیب آزاد',
+            bio: '',
+            image: 'Images/Authors/mt_photo.jpg'
         }
+
         
     ];
 
