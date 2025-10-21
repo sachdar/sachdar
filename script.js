@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
 //...Mujeeb Azad e Oedipus
          {
             id: 'a25', title: 'اڈیپس', authorId: 'b19', authorName: 'مجیب آزاد',
-            price: '400', edition: 'رجانک/کسمانک', pages: 112, publicationDate: 'انومبر-2025',
+            price: '400', edition: 'رجانک/کسمانک', pages: 112, publicationDate: 'نومبر-2025',
             image: 'Images/book_Covers/Mujeeb_Azad_oedipus.jpg' 
             },
         
