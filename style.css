@@ -622,7 +622,7 @@ margin-top:-70px;
 }
 
 .footer-name {
-    color: #00bcd4;
-    font-weight: bold;
-    text-shadow: 0 0 6px rgba(0, 188, 212, 0.6);
+    color: inherit;
+    font-weight: normal;
+    text-shadow: none;
 }
